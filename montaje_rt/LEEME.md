@@ -76,6 +76,11 @@ bash 05_diagnostico.sh     # te dice: estado del job, filas, si hay tabla de err
 - Job **Running** y filas subiendo → todo OK, corré `bash 04_transformacion.sh`.
 - Hay **EventosBruto_error_records** o filas sigue en **0** → corré `bash 06_reset_tabla.sh`
   (recrea la tabla todo-STRING y relanza Dataflow; espera ~5 min y revisá de nuevo).
+- Dataflow falla con **`ZONE_RESOURCE_POOL_EXHAUSTED`** (la zona no tiene máquinas libres):
+  no es tu configuración, es cuota del lab. `03_crear_dataflow.sh` ya **prueba varias zonas
+  solo** (`REGION-b/-c/-d/-a`) y vigila el arranque. Si todas fallan, reintentá en unos
+  minutos o forzá otra: `export WORKER_ZONE=us-east1-c && bash 03_crear_dataflow.sh`, o cambiá
+  de región (`export REGION=us-east4; rm -f .region; bash 01_crear_infra.sh && bash 03_crear_dataflow.sh`).
 
 ---
 
