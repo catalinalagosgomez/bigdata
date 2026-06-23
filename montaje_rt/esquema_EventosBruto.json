@@ -1,0 +1,12 @@
+[
+  { "name": "id_cliente",  "type": "STRING",    "mode": "NULLABLE" },
+  { "name": "cliente",     "type": "STRING",    "mode": "NULLABLE" },
+  { "name": "genero",      "type": "STRING",    "mode": "NULLABLE" },
+  { "name": "id_producto", "type": "STRING",    "mode": "NULLABLE" },
+  { "name": "producto",    "type": "STRING",    "mode": "NULLABLE" },
+  { "name": "precio",      "type": "FLOAT",     "mode": "NULLABLE" },
+  { "name": "cantidad",    "type": "INTEGER",   "mode": "NULLABLE" },
+  { "name": "monto",       "type": "FLOAT",     "mode": "NULLABLE" },
+  { "name": "forma_pago",  "type": "STRING",    "mode": "NULLABLE" },
+  { "name": "fecreg",      "type": "TIMESTAMP", "mode": "NULLABLE" }
+]
